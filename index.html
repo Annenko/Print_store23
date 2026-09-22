@@ -1,4 +1,440 @@
-</div>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Print_Store23 — Типография в Краснодаре | Баннеры, визитки, листовки</title>
+  <meta name="description" content="Типография Print_Store23 в Краснодаре. Печать баннеров, листовок, визиток, буклетов, наклеек, холстов, табличек из ПВХ. Помощь в разработке макетов. Ул. Демуса, 30." />
+  <style>
+    :root {
+      --primary: #6B4A8A;
+      --primary-dark: #523870;
+      --accent: #1A1A1A;
+      --bg: #FFFFFF;
+      --bg-alt: #F5F2F8;
+      --text: #2A2A2A;
+      --text-light: #6A6A6A;
+      --border: #E5E0EA;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .container { max-width: 1140px; margin: 0 auto; padding: 0 20px; }
+
+    /* ===== HEADER ===== */
+    header {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 20px;
+      max-width: 1140px;
+      margin: 0 auto;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      font-size: 20px;
+      color: var(--primary);
+      letter-spacing: 0.5px;
+    }
+    .logo-icon {
+      font-size: 28px;
+      line-height: 1;
+    }
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+    .logo-text small {
+      font-size: 10px;
+      color: var(--text-light);
+      font-weight: 500;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+    nav { display: flex; gap: 24px; }
+    nav a {
+      color: var(--text);
+      font-weight: 500;
+      font-size: 15px;
+    }
+    nav a:hover { color: var(--primary); text-decoration: none; }
+
+    /* ===== HERO ===== */
+    .hero {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      color: #fff;
+      padding: 80px 20px;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 44px;
+      font-weight: 800;
+      margin-bottom: 16px;
+      line-height: 1.15;
+    }
+    .hero p {
+      font-size: 18px;
+      opacity: 0.95;
+      margin-bottom: 32px;
+      max-width: 640px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .hero-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .btn {
+      display: inline-block;
+      padding: 14px 28px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      transition: 0.2s;
+      text-decoration: none;
+    }
+    .btn-primary {
+      background: #fff;
+      color: var(--primary);
+    }
+    .btn-primary:hover {
+      background: #f0eaf6;
+      text-decoration: none;
+    }
+    .btn-outline {
+      background: transparent;
+      color: #fff;
+      border: 2px solid rgba(255,255,255,0.6);
+    }
+    .btn-outline:hover {
+      border-color: #fff;
+      text-decoration: none;
+    }
+
+    /* ===== SECTIONS ===== */
+    section { padding: 70px 20px; }
+    .section-alt { background: var(--bg-alt); }
+
+    .section-title {
+      font-size: 32px;
+      font-weight: 800;
+      text-align: center;
+      margin-bottom: 12px;
+      color: var(--accent);
+    }
+    .section-subtitle {
+      text-align: center;
+      color: var(--text-light);
+      margin-bottom: 44px;
+      font-size: 16px;
+    }
+
+    /* ===== SERVICES ===== */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      max-width: 1140px;
+            margin: 0 auto;
+    }
+    .service-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      transition: 0.25s;
+    }
+    .service-card:hover {
+      border-color: var(--primary);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 28px rgba(107, 74, 138, 0.12);
+    }
+    .service-icon {
+      font-size: 32px;
+      margin-bottom: 12px;
+    }
+    .service-card h3 {
+      font-size: 18px;
+      margin-bottom: 8px;
+      color: var(--accent);
+    }
+    .service-card p {
+      font-size: 14px;
+      color: var(--text-light);
+    }
+
+    /* ===== CALCULATOR ===== */
+    .calculator {
+      max-width: 720px;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 16px;
+      padding: 32px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.06);
+      border: 1px solid var(--border);
+    }
+    .calc-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+    .calc-row label {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: var(--text-light);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .calc-row select,
+    .calc-row input {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: 15px;
+      font-family: inherit;
+      background: #fff;
+      color: var(--text);
+    }
+    .calc-row select:focus,
+    .calc-row input:focus {
+      outline: none;
+      border-color: var(--primary);
+    }
+    .calc-btn {
+      width: 100%;
+      padding: 16px;
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      font-size: 17px;
+      font-weight: 700;
+      cursor: pointer;
+      margin-top: 8px;
+      transition: 0.2s;
+    }
+    .calc-btn:hover { background: var(--primary-dark); }
+    #calc-result {
+      margin-top: 20px;
+      text-align: center;
+      padding: 20px;
+      background: var(--bg-alt);
+      border-radius: 10px;
+    }
+    .result-price {
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--primary);
+      display: block;
+    }
+    .disclaimer {
+      font-size: 12px;
+      color: var(--text-light);
+      margin-top: 8px;
+    }
+
+    /* ===== CONTACTS ===== */
+    .contacts-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .contacts-grid p { margin-bottom: 10px; }
+    .contacts-grid strong { color: var(--accent); }
+    .contact-block {
+      background: #fff;
+      border-radius: 12px;
+      padding: 24px;
+      border: 1px solid var(--border);
+    }
+    .contact-block h3 {
+      margin-bottom: 14px;
+      color: var(--primary);
+      font-size: 18px;
+    }
+    .phone-link {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--accent);
+      display: inline-block;
+      margin-bottom: 6px;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: var(--accent);
+      color: #ccc;
+      padding: 32px 20px;
+      text-align: center;
+      font-size: 14px;
+    }
+    footer a { color: #fff; }
+
+    /* ===== MOBILE ===== */
+    @media (max-width: 720px) {
+      .hero h1 { font-size: 30px; }
+      .hero p { font-size: 16px; }
+      nav { display: none; }
+      .calc-row { grid-template-columns: 1fr; }
+      .contacts-grid { grid-template-columns: 1fr; }
+      .section-title { font-size: 26px; }
+      .calculator { padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-inner">
+      <a href="#" class="logo">
+        <span class="logo-icon">🦝</span>
+        <span class="logo-text">
+          <span>PRINT_STORE23</span>
+          <small>Типография · Краснодар</small>
+        </span>
+      </a>
+      <nav>
+        <a href="#services">Услуги</a>
+        <a href="#calc">Расчёт</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+      </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Типография в Краснодаре<br>с характером</h1>
+    <p>Печатаем баннеры, листовки, визитки, буклеты, наклейки, холсты и таблички из ПВХ. Помогаем с макетами.</p>
+    <div class="hero-buttons">
+      <a href="#calc" class="btn btn-primary">Рассчитать заказ</a>
+      <a href="tel:+79231626403" class="btn btn-outline">📞 Позвонить</a>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="container">
+      <h2 class="section-title">Что мы печатаем</h2>
+      <p class="section-subtitle">Работаем с матовыми и глянцевыми материалами</p>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">🏗️</div>
+          <h3>Баннеры</h3>
+          <p>Уличные и интерьерные, любые размеры</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">📄</div>
+          <h3>Листовки</h3>
+          <p>А4, А5, А6 — матовая и глянцевая бумага</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">💼</div>
+          <h3>Визитки</h3>
+          <p>Классические и креативные, любые тиражи</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">📕</div>
+          <h3>Буклеты</h3>
+          <p>Двух- и трёхсгибные, с ламинацией</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🏷️</div>
+          <h3>Наклейки</h3>
+          <p>Плоттерная резка, любые формы</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🖼️</div>
+          <h3>Холсты</h3>
+          <p>Интерьерная печать на холсте</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🪧</div>
+          <h3>Штендеры</h3>
+          <p>Сборные конструкции для улицы</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🔲</div>
+          <h3>Таблички ПВХ</h3>
+          <p>Офисные, навигационные, информационные</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CALCULATOR -->
+  <section id="calc" class="section-alt">
+    <div class="container">
+      <h2 class="section-title">Калькулятор заказа</h2>
+      <p class="section-subtitle">Ориентировочная стоимость за 30 секунд</p>
+      <div class="calculator">
+        <div class="calc-row">
+          <div>
+            <label>Услуга</label>
+            <select id="service">
+              <option value="vizitki" data-base="800" data-qty="100">Визитки (100 шт)</option>
+              <option value="listovki" data-base="1200" data-qty="100">Листовки А5 (100 шт)</option>
+              <option value="buklety" data-base="2000" data-qty="50">Буклеты (50 шт)</option>
+              <option value="bannery" data-base="2500" data-qty="1">Баннер 1×2 м</option>
+              <option value="nakleyki" data-base="900" data-qty="100">Наклейки (100 шт)</option>
+              <option value="holsty" data-base="1800" data-qty="1">Холст 30×40</option>
+              <option value="shtendery" data-base="3500" data-qty="1">Штендер</option>
+              <option value="tablichki" data-base="1500" data-qty="1">Табличка ПВХ</option>
+            </select>
+          </div>
+          <div>
+            <label>Тираж / Количество</label>
+            <input type="number" id="quantity" value="100" min="1" />
+          </div>
+        </div>
+        <div class="calc-row">
+          <div>
+            <label>Материал</label>
+            <select id="paper">
+              <option value="0">Матовый</option>
+              <option value="0.1">Глянцевый (+10%)</option>
+            </select>
+          </div>
+          <div>
+            <label>Постпечать</label>
+            <select id="postprint">
+              <option value="0">Нет</option>
+              <option value="0.25">Ламинация (+25%)</option>
+              <option value="0.35">Тиснение (+35%)</option>
+            </select>
+          </div>
+          </div>
         <div class="calc-row">
           <div>
             <label>Срочность</label>
