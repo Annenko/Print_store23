@@ -1,241 +1,85 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Типография «Print_Store23» — печать любой сложности</title>
-  <style>
-    :root {
-      --primary: #2c3e50;
-      --accent: #e67e22;
-      --bg: #f9f9f9;
-      --text: #333;
-    }
-    body {
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.5;
-    }
-    header {
-      background: #fff;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 1px 3px rgba(0,0,0,.1);
-    }
-    .logo { font-weight: bold; font-size: 1.25rem; color: var(--primary); }
-    nav a { margin-left: 1.5rem; text-decoration: none; color: var(--primary); font-weight: 500; }
-    nav a:hover { color: var(--accent); }
-
-    main { max-width: 1200px; margin: 2rem auto; padding: 0 1rem; }
-    h1, h2 { color: var(--primary); }
-    .section { margin-bottom: 3rem; }
-
-    /* Калькулятор */
-    .calculator-card {
-      background: #fff;
-      padding: 2rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,.08);
-      max-width: 700px;
-    }
-    .calc-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
-    @media (max-width: 600px) { .calc-row { grid-template-columns: 1fr; } }
-    label { display: block; margin-bottom: .4rem; font-weight: 600; font-size: .95rem; }
-    select, input { width: 100%; padding: .6rem .8rem; border: 1px solid #ddd; border-radius: 4px; }
-    button.calc-btn {
-      width: 100%;
-      padding: .8rem 1rem;
-      background: var(--primary);
-      color: #fff;
-      border: none;
-      border-radius: 6px;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: background .2s;
-    }
-    button.calc-btn:hover { background: #1a252f; }
-    #calc-result {
-      margin-top: 1.5rem;
-      padding: 1rem;
-      background: #f0f4f8;
-      border-radius: 6px;
-      text-align: center;
-    }
-    .result-price { font-size: 1.4rem; font-weight: bold; color: var(--primary); }
-    .disclaimer { font-size: .85rem; color: #777; margin-top: .5rem; }
-
-    /* Услуги */
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1.5rem;
-    }
-    .service-card {
-      background: #fff;
-      padding: 1.5rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,.06);
-    }
-
-    /* Контакты */
-    .contacts-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
-    @media (max-width: 768px) { .contacts-grid { grid-template-columns: 1fr; } }
-    footer {
-      text-align: center;
-      padding: 2rem;
-      color: #777;
-      font-size: .9rem;
-      border-top: 1px solid #eee;
-      margin-top: 3rem;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <div class="logo">Полипринт</div>
-    <nav>
-      <a href="#about">О нас</a>
-      <a href="#services">Услуги</a>
-      <a href="#calc">Калькулятор</a>
-      <a href="#contacts">Контакты</a>
-    </nav>
-  </header>
-
-  <main>
-    <section id="about" class="section">
-      <h1>Типография «Полипринт»: печать любой сложности</h1>
-      <p>Собственное производство, контроль качества на каждом этапе, соблюдение сроков. Подготовим цветопробу, поможем с макетом, упакуем и доставим заказ.</p>
-    </section>
-
-    <section id="services" class="section">
-      <h2>Популярные услуги</h2>
-      <div class="services-grid">
-        <div class="service-card">
-          <h3>Визитки</h3>
-          <p>Мелованная/дизайнерская бумага, ламинация, тиснение, скругление углов.</p>
-        </div>
-        <div class="service-card">
-          <h3>Буклеты и каталоги</h3>
-          <p>Скрепление на скобу/клеевой, биговка, вырубка, ламинация.</p>
-        </div>
-        <div class="service-card">
-          <h3>Упаковка и POS</h3>
-          <p>Картон, каширование, лакирование, вырубка.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="calc" class="section">
-      <h2>Рассчитайте стоимость</h2>
-      <div class="calculator-card">
+</div>
         <div class="calc-row">
           <div>
-            <label>Услуга</label>
-            <select id="service">
-              <option value="visits" data-base="2500" data-qty="100">Визитки (100 шт.)</option>
-              <option value="booklet" data-base="12000" data-qty="500">Буклет А4 (500 шт.)</option>
-              <option value="catalog" data-base="28000" data-qty="200">Каталог А4 (200 шт.)</option>
-            </select>
-          </div>
-          <div>
-            <label>Тираж (шт.)</label>
-            <input type="number" id="quantity" value="100" min="1" />
-          </div>
-        </div>
-
-        <div class="calc-row">
-          <div>
-            <label>Бумага</label>
-            <select id="paper">
-              <option value="0">Мелованная (базовая)</option>
-              <option value="0.2">Дизайнерская (+20%)</option>
-            </select>
-          </div>
-          <div>
-            <label>Покрытие</label>
-            <select id="finish">
-              <option value="0">Матовая</option>
-              <option value="0.1">Глянцевая (+10%)</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="calc-row">
-          <div>
-            <label>Постпечать</label>
-            <select id="postprint">
-              <option value="0">Нет</option>
-              <option value="0.35">Тиснение (+35%)</option>
-              <option value="0.25">Ламинация (+25%)</option>
-            </select>
-          </div>
-          <div>
-            <label>Срок</label>
+            <label>Срочность</label>
             <select id="urgency">
-              <option value="0">Обычный (3–5 дней)</option>
-              <option value="0.4">Срочный (+40%)</option>
+              <option value="0">Обычный срок (3–5 дней)</option>
+              <option value="0.4">Срочно (+40%)</option>
             </select>
           </div>
+          <div></div>
         </div>
-
-        <button class="calc-btn" onclick="calculate()">Рассчитать стоимость</button>
-
+        <button type="button" class="calc-btn" onclick="calculate()">Рассчитать стоимость</button>
         <div id="calc-result">
           <span class="result-price">— ₽</span>
-          <p class="disclaimer">Ориентировочная стоимость. Окончательный расчёт после проверки макета.</p>
+          <p class="disclaimer">Ориентировочная стоимость. Точный расчёт — после проверки макета.</p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="contacts" class="section">
-      <h2>Контакты</h2>
+  <!-- CONTACTS -->
+  <section id="contacts">
+    <div class="container">
+      <h2 class="section-title">Контакты</h2>
+      <p class="section-subtitle">Приходите или звоните — мы на связи</p>
       <div class="contacts-grid">
-        <div>
-          <p><strong>Адрес:</strong> г. Москва, ул. Примерная, д. 1</p>
-          <p><strong>Телефон:</strong> +7 (999) 000-00-00</p>
-          <p><strong>Email:</strong> info@poliprint.ru</p>
+        <div class="contact-block">
+          <h3>📍 Адрес</h3>
+          <p>г. Краснодар,<br>ул. Демуса, 30</p>
+          <p style="margin-top: 12px;">
+            <a href="https://yandex.ru/maps/?text=Краснодар,%20улица%20Демуса,%2030" target="_blank" rel="noopener">
+              Открыть в Яндекс.Картах →
+            </a>
+          </p>
         </div>
-        <div>
-          <p>Работаем ежедневно с 9:00 до 19:00. Есть доставка по городу и области.</p>
+        <div class="contact-block">
+          <h3>📞 Связь</h3>
+          <a href="tel:+79231626403" class="phone-link">+7 (923) 162-64-03</a><br>
+          <a href="tel:+79615801990" class="phone-link">+7 (961) 580-19-90</a>
+          <p style="margin-top: 14px; color: var(--text-light); font-size: 14px;">
+            Ежедневно с 9:00 до 19:00
+          </p>
         </div>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
+  <!-- FOOTER -->
   <footer>
-    &copy; 2024 Типография «Полипринт». Все права защищены. Политика конфиденциальности.
+    <p>&copy; 2024 Типография PRINT_STORE23 · Краснодар, ул. Демуса, 30</p>
+    <p style="margin-top: 8px;">
+      <a href="tel:+79231626403">+7 (923) 162-64-03</a> ·
+      <a href="tel:+79615801990">+7 (961) 580-19-90</a>
+    </p>
   </footer>
 
   <script>
     function calculate() {
       const service = document.getElementById('service');
+      const quantity = Math.max(1, parseInt(document.getElementById('quantity').value) || 1);
       const basePrice = parseFloat(service.options[service.selectedIndex].getAttribute('data-base'));
       const baseQty = parseInt(service.options[service.selectedIndex].getAttribute('data-qty'));
 
-      const quantity = parseInt(document.getElementById('quantity').value) || 1;
-      const paper = parseFloat(document.getElementById('paper').value);
-      const finish = parseFloat(document.getElementById('finish').value);
-      const postprint = parseFloat(document.getElementById('postprint').value);
-      const urgency = parseFloat(document.getElementById('urgency').value);
-
-      // Цена за единицу из базового тиража, масштабируем на новый тираж
-      const pricePerUnit = basePrice / baseQty;
-      let total = pricePerUnit * quantity;
-
-      total = total * (1 + paper + finish + postprint + urgency);
-
-      const minOrder = 1500; // Минимальная сумма заказа
-      if (total < minOrder) {
-        total = minOrder;
+      if (isNaN(basePrice) || isNaN(baseQty) || baseQty === 0) {
+        document.querySelector('#calc-result .result-price').textContent = 'Выберите услугу';
+        return;
       }
 
-      document.querySelector('#calc-result .result-price').textContent = Math.round(total) + ' ₽';
+      const paper = parseFloat(document.getElementById('paper').value) || 0;
+      const postprint = parseFloat(document.getElementById('postprint').value) || 0;
+      const urgency = parseFloat(document.getElementById('urgency').value) || 0;
+
+      const pricePerUnit = basePrice / baseQty;
+      let total = pricePerUnit * quantity * (1 + paper + postprint + urgency);
+
+      const minOrder = 500;
+      if (total < minOrder) total = minOrder;
+
+      document.querySelector('#calc-result .result-price').textContent =
+        Math.round(total).toLocaleString('ru-RU') + ' ₽';
     }
   </script>
+
 </body>
 </html>
