@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Наклейки — Print_Store23 | Типография в Краснодаре</title>
+  <meta name="description" content="Печать наклеек в Краснодаре. Плоттерная резка, любые формы и размеры. Типография Print_Store23, ул. Демуса, 30." />
+  <style>
+    :root {
+      --primary: #6B4A8A;
+      --primary-dark: #523870;
+      --accent: #1A1A1A;
+      --bg: #FFFFFF;
+      --bg-alt: #F5F2F8;
+      --text: #2A2A2A;
+      --text-light: #6A6A6A;
+      --border: #E5E0EA;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+    a { color: var(--primary); text-decoration: none; }
+    header { background: #fff; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; }
+    .header-inner { display: flex; justify-content: space-between; align-items: center; padding: 14px 20px; max-width: 1140px; margin: 0 auto; }
+    .logo { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 20px; color: var(--primary); }
+    .logo-icon { font-size: 28px; line-height: 1; }
+    .logo-text { display: flex; flex-direction: column; line-height: 1.1; }
+    .logo-text small { font-size: 10px; color: var(--text-light); font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; }
+    nav { display: flex; gap: 24px; }
+    nav a { color: var(--text); font-weight: 500; font-size: 15px; }
+    nav a:hover { color: var(--primary); }
+    .breadcrumbs { padding: 20px 20px 0; max-width: 1140px; margin: 0 auto; font-size: 14px; color: var(--text-light); }
+    .breadcrumbs a { color: var(--primary); }
+    .breadcrumbs span { margin: 0 8px; }
+    .page-header { padding: 30px 20px 40px; text-align: center; }
+    .page-header h1 { font-size: 40px; font-weight: 800; color: var(--accent); margin-bottom: 12px; }
+    .page-header p { color: var(--text-light); font-size: 16px; max-width: 640px; margin: 0 auto; }
+    .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; max-width: 1140px; margin: 0 auto; padding: 0 20px 60px; }
+    .gallery-item { background: #fff; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; transition: 0.25s; }
+    .gallery-item:hover { border-color: var(--primary); transform: translateY(-4px); box-shadow: 0 12px 28px rgba(107, 74, 138, 0.15); }
+    .gallery-item img { width: 100%; height: 240px; object-fit: cover; display: block; background: var(--bg-alt); }
+    .gallery-caption { padding: 14px 16px; font-size: 14px; color: var(--text); font-weight: 500; }
+    .cta { background: var(--primary); color: #fff; text-align: center; padding: 60px 20px; }
+    .cta h2 { font-size: 28px; margin-bottom: 16px; font-weight: 800; }
+    .cta p { margin-bottom: 24px; opacity: 0.95; }
+    .btn { display: inline-block; padding: 14px 28px; border-radius: 8px; font-weight: 600; font-size: 16px; background: #fff; color: var(--primary); transition: 0.2s; }
+    .btn:hover { background: #f0eaf6; }
+    footer { background: var(--accent); color: #ccc; padding: 32px 20px; text-align: center; font-size: 14px; }
+    footer a { color: #fff; }
+    @media (max-width: 720px) {
+      nav { display: none; }
+      .page-header h1 { font-size: 28px; }
+      .gallery { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">🦝</span>
+        <span class="logo-text">
+          <span>PRINT_STORE23</span>
+          <small>Типография · Краснодар</small>
+        </span>
+      </a>
+      <nav>
+        <a href="index.html#services">Услуги</a>
+        <a href="index.html#calc">Расчёт</a>
+        <a href="index.html#contacts">Контакты</a></div>
+  </header>
+
+  <div class="breadcrumbs">
+    <a href="index.html">Главная</a>
+    <span>→</span>
+    Наклейки
+  </div>
+
+  <div class="page-header">
+    <h1>Наклейки</h1>
+    <p>Плоттерная резка, любые формы и размеры. Винил, матовые, глянцевые, прозрачные.</p>
+  </div>
+
+  <div class="gallery">
+    <div class="gallery-item">
+      <img src="images/nakleyka-1.jpg" alt="Наклейка 1" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 300%22><rect fill=%22%23F5F2F8%22 width=%22400%22 height=%22300%22/><text x=%2250%25%22 y=%2250%25%22 font-size=%2220%22 fill=%22%236B4A8A%22 text-anchor=%22middle%22 dy=%22.3em%22>Фото 1</text></svg>'">
+      <div class="gallery-caption">Наклейки на витрину</div>
+    </div>
+    <div class="gallery-item">
+      <img src="images/nakleyka-2.jpg" alt="Наклейка 2" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 300%22><rect fill=%22%23F5F2F8%22 width=%22400%22 height=%22300%22/><text x=%2250%25%22 y=%2250%25%22 font-size=%2220%22 fill=%22%236B4A8A%22 text-anchor=%22middle%22 dy=%22.3em%22>Фото 2</text></svg>'">
+      <div class="gallery-caption">Круглые наклейки с логотипом</div>
+    </div>
+    <div class="gallery-item">
+      <img src="images/nakleyka-3.jpg" alt="Наклейка 3" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 300%22><rect fill=%22%23F5F2F8%22 width=%22400%22 height=%22300%22/><text x=%2250%25%22 y=%2250%25%22 font-size=%2220%22 fill=%22%236B4A8A%22 text-anchor=%22middle%22 dy=%22.3em%22>Фото 3</text></svg>'">
+      <div class="gallery-caption">Наклейки на упаковку</div>
+    </div>
+    <div class="gallery-item">
+      <img src="images/nakleyka-4.jpg" alt="Наклейка 4" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 300%22><rect fill=%22%23F5F2F8%22 width=%22400%22 height=%22300%22/><text x=%2250%25%22 y=%2250%25%22 font-size=%2220%22 fill=%22%236B4A8A%22 text-anchor=%22middle%22 dy=%22.3em%22>Фото 4</text></svg>'">
+      <div class="gallery-caption">Прозрачные наклейки</div>
+    </div>
+  </div>
+
+  <section class="cta">
+    <h2>Нужны наклейки?</h2>
+    <p>Пришлите макет и размер — рассчитаем за 15 минут</p>
+    <a href="tel:+79231626403" class="btn">📞 +7 (923) 162-64-03</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Типография PRINT_STORE23 · Краснодар, ул. Демуса, 30</p>
+  </footer>
+</body>
+</html>
+      </nav>
